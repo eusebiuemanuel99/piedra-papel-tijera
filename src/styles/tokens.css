@@ -1,0 +1,88 @@
+:root {
+  --rps-font-body: 'Atkinson Hyperlegible Next', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --rps-font-display:
+    'Archivo Variable', 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --rps-space-1: 4px;
+  --rps-space-2: 8px;
+  --rps-space-3: 12px;
+  --rps-space-4: 16px;
+  --rps-space-6: 24px;
+  --rps-space-8: 32px;
+  --rps-space-12: 48px;
+
+  --rps-radius-sm: 8px;
+  --rps-radius-md: 12px;
+  --rps-radius-lg: 20px;
+
+  --rps-border-width: 2px;
+  --rps-focus-width: 3px;
+  --rps-focus-offset: 4px;
+  --rps-shadow-offset: 4px;
+
+  color-scheme: light;
+  --rps-bg-canvas: #f5f1e8;
+  --rps-bg-surface: #ffffff;
+  --rps-bg-sunken: #ebe5d8;
+  --rps-text-primary: #111b33;
+  --rps-text-muted: #4a5472;
+  --rps-text-on-signal: #ffffff;
+  --rps-border-strong: #111b33;
+  --rps-border-subtle: #d9d2c3;
+  --rps-focus-ring: #111b33;
+  --rps-signal-default: #2347b0;
+  --rps-signal-pressed: #172f82;
+  --rps-result-win: #1f7a4d;
+  --rps-result-win-bg: #e3f1e7;
+  --rps-result-lose: #b3261e;
+  --rps-result-lose-bg: #f8e1de;
+  --rps-result-draw: #7a5a00;
+  --rps-result-draw-bg: #f3e8c5;
+  --rps-scrim: rgb(17 27 51 / 60%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --rps-bg-canvas: #111b33;
+    --rps-bg-surface: #141d33;
+    --rps-bg-sunken: #0f1729;
+    --rps-text-primary: #e8eef9;
+    --rps-text-muted: #a7b3cc;
+    --rps-text-on-signal: #0b1220;
+    --rps-border-strong: #e8eef9;
+    --rps-border-subtle: #2a3550;
+    --rps-focus-ring: #e8eef9;
+    --rps-signal-default: #8ab4ff;
+    --rps-signal-pressed: #a9c7ff;
+    --rps-result-win: #7fd6a0;
+    --rps-result-win-bg: #1a2e22;
+    --rps-result-lose: #ff9c92;
+    --rps-result-lose-bg: #3a1b18;
+    --rps-result-draw: #e8c46a;
+    --rps-result-draw-bg: #352f16;
+    --rps-scrim: rgb(0 0 0 / 60%);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --rps-bg-canvas: #111b33;
+  --rps-bg-surface: #141d33;
+  --rps-bg-sunken: #0f1729;
+  --rps-text-primary: #e8eef9;
+  --rps-text-muted: #a7b3cc;
+  --rps-text-on-signal: #0b1220;
+  --rps-border-strong: #e8eef9;
+  --rps-border-subtle: #2a3550;
+  --rps-focus-ring: #e8eef9;
+  --rps-signal-default: #8ab4ff;
+  --rps-signal-pressed: #a9c7ff;
+  --rps-result-win: #7fd6a0;
+  --rps-result-win-bg: #1a2e22;
+  --rps-result-lose: #ff9c92;
+  --rps-result-lose-bg: #3a1b18;
+  --rps-result-draw: #e8c46a;
+  --rps-result-draw-bg: #352f16;
+  --rps-scrim: rgb(0 0 0 / 60%);
+}
