@@ -8,14 +8,8 @@ Requisitos: Node.js ≥ 20.19 y npm.
 
 ```bash
 npm install
-npm run build      # genera dist/ con el service worker
+npm run build
 ```
-
-`dist/` es estático. Sirve en cualquier hosting con _fallback_ a `index.html` para las rutas de la SPA:
-
-- **Vercel**: importa el repositorio. `vercel.json` ya incluye el rewrite. Build `npm run build`, salida `dist`.
-- **Netlify**: `public/_redirects` ya incluye la regla `/* /index.html 200`.
-- **Subruta (p. ej. GitHub Pages)**: `BASE_PATH=/nombre-del-repo/ npm run build`, publica `dist/` y copia `index.html` como `404.html`.
 
 ## Desarrollo
 
@@ -41,11 +35,9 @@ npm run build      # genera dist/ con el service worker
 ## Extras
 
 - **Ranking** (`/ranking`): mejor puntuación de cada jugador, jugador actual resaltado y puntos que la máquina ha ganado.
-- **Máquina con IA**: nunca ve la jugada actual. Con menos de 3 rondas de historial juega al azar; después predice la próxima jugada del jugador combinando transiciones (Markov de orden 1) y frecuencia, y juega lo que la vence. Un 30 % de las veces juega al azar para no ser predecible.
+- **Máquina**: nunca ve la jugada actual. Con menos de 3 rondas de historial juega al azar; después predice la próxima jugada del jugador combinando transiciones (Markov de orden 1) y frecuencia, y juega lo que la vence. Un 30 % de las veces juega al azar para no ser predecible.
 - **Vibración** (200 ms) cuando el jugador pierde, en dispositivos compatibles.
 - Tema claro / oscuro / sistema, persistido y sin parpadeo al cargar.
 - Aviso de sin conexión no bloqueante.
 - Historial de las últimas 5 rondas.
 - Accesibilidad: regiones `aria-live`, gestión de foco, foco visible, objetivos táctiles ≥ 48 px y `prefers-reduced-motion`.
-- Sincronización entre pestañas.
-- Tests unitarios y de componentes, E2E con Puppeteer y CI en GitHub Actions (formato, lint, tipos, tests, build y E2E).
